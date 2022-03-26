@@ -1,0 +1,11 @@
+{
+  "name": "03_fin_modulo_02",
+  "version": "1.0.0",
+  "description": "Tarea de fin del Modulo #2",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Luis Martirena",
+  "license": "ISC"
+}

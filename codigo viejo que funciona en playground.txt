@@ -1,0 +1,88 @@
+const autos = require("./autos")
+
+const concesionaria = {
+    autos: autos,
+    buscarAuto: function(patenteBuscada){
+        let autoEncontrado = {}
+        for (let i = 0; i < autos.length; i++) {
+            if (patenteBuscada === autos[i].patente) {
+                autoEncontrado = autos[i]
+                return autoEncontrado;
+            } else {
+                return null    
+            }            
+         }
+      },   
+   venderAuto: function(patenteBuscada){
+      if (concesionaria.buscarAuto(patenteBuscada) !== null) {
+         let autoEncontrado = concesionaria.buscarAuto(patenteBuscada)
+      let ind = autos.indexOf(autoEncontrado)
+      autos[ind].vendido = true;
+              
+        } 
+    }
+}
+
+
+ETAPA 3
+=======
+const autos = require("./autos")
+
+const concesionaria = {
+    autos: autos,
+    buscarAuto: function(patenteBuscada){
+        let autoEncontrado = {}
+        for (let i = 0; i < autos.length; i++) {
+            if (patenteBuscada === autos[i].patente) {
+                autoEncontrado = autos[i]
+                return autoEncontrado;
+            } else {
+                return null    
+            }            
+         }
+      },   
+   venderAuto: function(patenteBuscada){
+      if (this.buscarAuto(patenteBuscada) !== null) {
+         let autoEncontrado = concesionaria.buscarAuto(patenteBuscada)
+      let ind = autos.indexOf(autoEncontrado)
+      autos[ind].vendido = true;
+              
+        } 
+    }
+}
+
+FUNCIONALIDAD EXTRA
+==================
+const autos = require("./autos")
+
+const concesionaria = {
+    autos: autos,
+    buscarAuto: function(patenteBuscada){
+        let autoEncontrado = {}
+        for (let i = 0; i < autos.length; i++) {
+            if (patenteBuscada === autos[i].patente) {
+                autoEncontrado = autos[i]
+                return autoEncontrado;
+            } else {
+                return null    
+            }            
+         }
+      },   
+   venderAuto: function(patenteBuscada){
+      if (this.buscarAuto(patenteBuscada) !== null) {
+         let autoEncontrado = concesionaria.buscarAuto(patenteBuscada)
+      let ind = autos.indexOf(autoEncontrado)
+      autos[ind].vendido = true;
+              
+        } 
+    },
+    autosParaLaVenta: function(autos){
+        const autosEncontrados = autos.filter(function(auto){
+            return auto.vendido === false;
+             
+        })
+        return autosEncontrados;
+    }
+}
+
+
